@@ -1,8 +1,3 @@
-"""
-Input validation functions
-"""
-
-
 def validate_symbol(symbol: str) -> str:
     """Validate and normalize trading symbol."""
     if not symbol:
@@ -14,7 +9,6 @@ def validate_symbol(symbol: str) -> str:
 
 
 def validate_side(side: str) -> str:
-    """Validate order side."""
     if not side:
         raise ValueError("Side is required")
     side = side.upper().strip()
@@ -24,7 +18,6 @@ def validate_side(side: str) -> str:
 
 
 def validate_order_type(order_type: str) -> str:
-    """Validate order type."""
     if not order_type:
         raise ValueError("Order type is required")
     order_type = order_type.upper().strip()
@@ -34,7 +27,6 @@ def validate_order_type(order_type: str) -> str:
 
 
 def validate_quantity(quantity) -> float:
-    """Validate order quantity."""
     try:
         qty = float(quantity)
         if qty <= 0:
@@ -45,7 +37,6 @@ def validate_quantity(quantity) -> float:
 
 
 def validate_price(price, order_type: str) -> float:
-    """Validate order price."""
     if order_type == "LIMIT":
         if price is None:
             raise ValueError("Price is required for LIMIT orders")
