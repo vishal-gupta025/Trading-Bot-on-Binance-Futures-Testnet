@@ -1,7 +1,3 @@
-"""
-Binance Futures Testnet API Client using python-binance
-"""
-
 import logging
 from binance.client import Client
 from binance.exceptions import BinanceAPIException
@@ -13,7 +9,6 @@ logger = logging.getLogger("trading_bot")
 
 
 class BinanceClient:
-    """Wrapper for Binance Futures Testnet API using python-binance."""
     
     def __init__(self, api_key: str, api_secret: str):
         self.client = Client(api_key, api_secret, testnet=True)
@@ -22,7 +17,6 @@ class BinanceClient:
     
     def place_order(self, symbol: str, side: str, order_type: str, 
                     quantity: float, price: float = None) -> dict:
-        """Place an order on Binance Futures Testnet."""
         
         logger.info(f"Placing {order_type} {side} order: {quantity} {symbol}" +
                    (f" @ {price}" if price else ""))
