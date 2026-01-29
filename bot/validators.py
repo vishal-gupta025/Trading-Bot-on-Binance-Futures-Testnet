@@ -1,5 +1,4 @@
 def validate_symbol(symbol: str) -> str:
-    """Validate and normalize trading symbol."""
     if not symbol:
         raise ValueError("Symbol is required")
     symbol = symbol.upper().strip()
