@@ -1,0 +1,3 @@
+2026-01-29 16:37:28,991 | INFO     | Placing MARKET BUY order: 0.01 BTCUSDT
+2026-01-29 16:37:30,149 | DEBUG    | Response: {'orderId': 12021952803, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJbc1545314c65bd6e7e80b5', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.010', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1769684852057}
+2026-01-29 16:37:30,150 | INFO     | Order placed successfully. ID: 12021952803
