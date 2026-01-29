@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-"""
-Binance Futures Testnet Trading Bot - CLI Entry Point
-
-Usage:
-    python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.01
-    python cli.py -s BTCUSDT -S SELL -t LIMIT -q 0.01 -p 150000
-"""
-
 import os
 import argparse
 from dotenv import load_dotenv
