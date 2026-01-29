@@ -1,14 +1,9 @@
-"""
-Logging configuration
-"""
-
 import logging
 import os
 from datetime import datetime
 
 
 def setup_logging(log_dir: str = "logs"):
-    """Setup logging to file and console."""
     
     # Create logs directory
     if not os.path.exists(log_dir):
