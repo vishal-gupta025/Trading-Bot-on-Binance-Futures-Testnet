@@ -46,23 +46,21 @@ def format_result(result: dict) -> str:
     lines = ["\n" + "=" * 50]
     
     if result["success"]:
-        lines.append("ORDER PLACED SUCCESSFULLY")
+        lines.append("ORDER RESPONSE DETAILS")
         lines.append("=" * 50)
-        lines.append(f"  Order ID:     {result['orderId']}")
-        lines.append(f"  Symbol:       {result['symbol']}")
-        lines.append(f"  Side:         {result['side']}")
-        lines.append(f"  Type:         {result['type']}")
-        lines.append(f"  Status:       {result['status']}")
-        lines.append(f"  Quantity:     {result['quantity']}")
-        lines.append(f"  Executed:     {result['executedQty']}")
-        if result.get('price') and result['price'] != '0.00':
-            lines.append(f"  Price:        {result['price']}")
-        if result.get('avgPrice') and result['avgPrice'] != '0.00':
-            lines.append(f"  Avg Price:    {result['avgPrice']}")
+        lines.append(f"  Order ID:      {result['orderId']}")
+        lines.append(f"  Status:        {result['status']}")
+        lines.append(f"  Executed Qty:  {result['executedQty']}")
+        if result.get('avgPrice'):
+            lines.append(f"  Avg Price:     {result['avgPrice']}")
+        lines.append("-" * 50)
+        lines.append("  SUCCESS: Order placed successfully!")
     else:
         lines.append("ORDER FAILED")
         lines.append("=" * 50)
         lines.append(f"  Error: {result['error']}")
+        lines.append("-" * 50)
+        lines.append("  FAILURE: Order was not placed.")
     
     lines.append("=" * 50)
     return "\n".join(lines)
