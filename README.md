@@ -47,10 +47,23 @@ trading_bot/
 │   └── logging_config.py  # Logging setup
 ├── logs/                  # Log files
 ├── cli.py                 # CLI entry point
+├── ui.py                  # Streamlit web UI
 ├── .env                   # API credentials
 ├── requirements.txt
 └── README.md
 ```
+
+## Web UI
+
+Run the Streamlit interface:
+```bash
+streamlit run ui.py
+```
+
+This opens a browser-based interface where you can:
+- Place Market and Limit orders
+- View order summary before placing
+- See recent orders history
 
 ## Features
 
@@ -59,11 +72,13 @@ trading_bot/
 - Input validation
 - Logging to file and console
 - Error handling
+- **Web UI** (Streamlit)
 
 ## Dependencies
 
 - `python-binance` - Official Binance API wrapper
 - `python-dotenv` - Environment variable management
+- `streamlit` - Web UI framework
 
 ## Assumptions
 
