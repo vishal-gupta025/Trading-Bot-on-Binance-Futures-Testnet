@@ -1,7 +1,3 @@
-"""
-Order placement logic
-"""
-
 import logging
 
 logger = logging.getLogger("trading_bot")
