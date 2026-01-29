@@ -5,12 +5,7 @@ logger = logging.getLogger("trading_bot")
 
 def place_order(client, symbol: str, side: str, order_type: str, 
                 quantity: float, price: float = None) -> dict:
-    """
-    Place an order and handle the response.
-    
-    Returns:
-        dict with order details or error
-    """
+   
     try:
         response = client.place_order(symbol, side, order_type, quantity, price)
         
@@ -38,7 +33,6 @@ def place_order(client, symbol: str, side: str, order_type: str,
 
 
 def format_result(result: dict) -> str:
-    """Format order result for display."""
     lines = ["\n" + "=" * 50]
     
     if result["success"]:
